@@ -1,4 +1,4 @@
-import { toHaveDisplayValue } from "@testing-library/jest-dom/dist/matchers";
+
 import { Component } from "react";
 import productService from "../services/product-service";
 
@@ -59,7 +59,9 @@ export default class Product extends Component
                 Name:<input type="text" name="name" className="form-control" onChange={this.changeHandler} />
                 Price:<input type="text" name="price" className="form-control" onChange={this.changeHandler} />
                 Picture:<input type="file" name="picture" className="form-control" onChange={this.changeHandler} />
-                <img width="50" height="50" src={this.state.picture} />
+         
+                <img width="50" height="50" src={this.state.picture} alt="Product" />
+
                 <br/>
                 <input type="button" value="Add" className="btn btn-success" onClick={this.addProduct} />&nbsp;
                 <input type="button" value="Update" className="btn btn-warning" />&nbsp;

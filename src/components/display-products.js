@@ -35,7 +35,9 @@ export default class DisplayProducts extends Component
                             <td>{p.id}</td>
                             <td>{p.name}</td>
                             <td>{p.price}</td>
-                            <td><img width="50" height="50" src={p.picture} /></td>
+                           
+                            <td><img width="50" height="50" src={p.picture} alt={p.name} /></td>
+
                         </tr>
                         )
                     }
