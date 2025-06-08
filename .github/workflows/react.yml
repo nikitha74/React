@@ -17,13 +17,18 @@ jobs:
       - name: Set up Node.js
         uses: actions/setup-node@v3
         with:
-          node-version: 18
+          node-version: 16
+
+      - name: Check Node & npm versions
+        run: |
+          node -v
+          npm -v
 
       - name: Install dependencies
         run: npm install
 
       - name: Build the app
-        run: npm run build
+        run: npm run build --verbose
 
       - name: Run tests
         run: npm test -- --watchAll=false
